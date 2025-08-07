@@ -5,14 +5,16 @@ import JADTraxLogo from './JADTraxLogo';
 import { Zap, Gauge, UserCheck } from 'lucide-react';
 
 import { 
-  BarChart3, 
+  MousePointerClick,
+  ShieldCheck,
+  Timer,
+  Filter,
+  Layers,
+  MonitorSmartphone, 
   Globe, 
-  Shield, 
-  MousePointer, 
-  Play, 
+  Shield,  
   Activity,
   Search,
-  Users,
   CheckCircle,
   ArrowRight,
   Lock,
@@ -21,8 +23,7 @@ import {
   Mail,
   User,
   AlertCircle,
-  Sparkles,
-  Target,  
+  Sparkles,  
   Rocket,
 } from 'lucide-react';
 
@@ -49,60 +50,67 @@ function LandingPage() {
 
   const features = [
     {
-      icon: BarChart3,
-      title: 'Overview Analytics',
-      description: 'Complete dashboard with pageviews, unique visitors, bounce rates, and traffic sources.',
-      color: 'from-blue-500 to-blue-600',
-      stats: 'Real-time'
+      icon: Activity,
+      title: 'Real-Time Analytics Dashboard',
+      description: 'Live visitor monitoring, real-time pageviews, instant updates, and server connection status.',
+      color: 'from-green-500 to-green-600',
+      stats: 'Live data'
     },
     {
-      icon: Activity,
-      title: 'Real-time Monitoring',
-      description: 'Watch your website traffic as it happens with live visitor tracking.',
-      color: 'from-green-500 to-green-600',
-      stats: '< 1s latency'
+      icon: Globe,
+      title: 'Regional Analytics & Geographic Insights',
+      description: 'Country and city-level performance with regional traffic and device breakdowns.',
+      color: 'from-teal-500 to-teal-600',
+      stats: '15+ countries'
+    },
+    {
+      icon: MousePointerClick,
+      title: 'Advanced User Behavior Tracking',
+      description: 'Session recording, event tracking, heatmaps, and timeline-based replays.',
+      color: 'from-red-500 to-red-600',
+      stats: 'Full journey'
     },
     {
       icon: Search,
-      title: 'SEO Analytics',
-      description: 'Track Core Web Vitals, page load times, and SEO performance metrics.',
+      title: 'SEO Analytics & Performance Metrics',
+      description: 'Monitor Core Web Vitals, keyword rankings, backlinks, and page load performance.',
       color: 'from-purple-500 to-purple-600',
       stats: '50+ metrics'
     },
     {
-      icon: Users,
-      title: 'User Behavior',
-      description: 'Understand visitor interactions through detailed behavior analysis.',
-      color: 'from-orange-500 to-orange-600',
-      stats: 'Deep insights'
-    },
-    {
-      icon: MousePointer,
-      title: 'Heatmaps',
-      description: 'Visualize user interactions with click heatmaps and scroll maps.',
-      color: 'from-red-500 to-red-600',
-      stats: 'Visual tracking'
-    },
-    {
-      icon: Play,
-      title: 'Session Recordings',
-      description: 'Watch real user sessions to identify usability issues.',
-      color: 'from-indigo-500 to-indigo-600',
-      stats: 'HD recordings'
-    },
-    {
-      icon: Target,
-      title: 'Conversion Funnels',
-      description: 'Track user journeys and identify drop-off points.',
+      icon: Layers,
+      title: 'Conversion Funnel Analysis',
+      description: 'Visualize multi-step funnels, track conversions, and analyze drop-offs.',
       color: 'from-pink-500 to-pink-600',
-      stats: 'Multi-step'
+      stats: 'Custom funnels'
     },
     {
-      icon: Globe,
-      title: 'Regional Analytics',
-      description: 'Get detailed insights into global audience performance.',
-      color: 'from-teal-500 to-teal-600',
-      stats: '195+ countries'
+      icon: MonitorSmartphone,
+      title: 'Multi-Device Analytics',
+      description: 'Breakdown across desktop, mobile, and tablet with cross-device user tracking.',
+      color: 'from-indigo-500 to-indigo-600',
+      stats: 'Responsive'
+    },
+    {
+      icon: Timer,
+      title: 'Flexible Time Range Analysis',
+      description: '24h, 7d, 30d, and custom range comparisons with trend analysis.',
+      color: 'from-blue-500 to-blue-600',
+      stats: 'Custom ranges'
+    },
+    {
+      icon: Filter,
+      title: 'Advanced Data Filtering & Reporting',
+      description: 'URL, region, and time filters with export-ready analytics tables.',
+      color: 'from-orange-500 to-orange-600',
+      stats: 'Fully filterable'
+    },
+    {
+      icon: ShieldCheck,
+      title: 'Privacy-First Approach',
+      description: 'Self-hosted, GDPR-compliant with encrypted storage and full data ownership.',
+      color: 'from-gray-500 to-gray-600',
+      stats: '100% private'
     }
   ];
 
@@ -317,10 +325,9 @@ function LandingPage() {
             </div>
             
             <nav className="hidden lg:flex items-center space-x-8">
-              <a href="#features" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Features</a>
-              <a href="#pricing" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Pricing</a>
-              <a href="#customers" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Customers</a>
-              <a href="#" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Documentation</a>
+              <a href="#features" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Core Features</a>
+              <a href="#customers" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">About JADTech</a>
+              <a href="#JAD" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">Why you choose JADTrax?</a>
               <div className="flex items-center space-x-3">
                 {user ? (
                   <div className="flex items-center space-x-3">
@@ -366,10 +373,9 @@ function LandingPage() {
         {mobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-100 shadow-xl">
             <div className="px-6 py-6 space-y-6">
-              <a href="#features" className="block text-gray-700 font-medium py-2">Features</a>
-              <a href="#pricing" className="block text-gray-700 font-medium py-2">Pricing</a>
-              <a href="#customers" className="block text-gray-700 font-medium py-2">Customers</a>
-              <a href="#" className="block text-gray-700 font-medium py-2">Documentation</a>
+              <a href="#features" className="block text-gray-700 font-medium py-2">Core Features</a>
+              <a href="#customers" className="block text-gray-700 font-medium py-2">About JADTech</a>
+              <a href="#JAD" className="block text-gray-700 font-medium py-2">Why you choose JADTrax?</a>
               <div className="pt-6 border-t border-gray-200 space-y-4">
                 {user ? (
                   <div className="space-y-4">
@@ -455,7 +461,7 @@ function LandingPage() {
             </div>
 
             {/* CTA Buttons - Compact */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
               {user ? (
                 <button 
                   onClick={() => navigate('/dashboard')}
@@ -480,6 +486,10 @@ function LandingPage() {
           </div>
 
           {/* Features Grid - Compact 4x2 Layout */}
+          <div className="mt-12 text-center"id="features">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Core Features
+            </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <div 
@@ -497,35 +507,64 @@ function LandingPage() {
                   </span>
                 </div>
               </div>
+              
             ))}
           </div>
+          </div>
+         
 
-          {/* Trust Indicators - Compact */}
           <div className="mt-12 text-center">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">10M+</div>
-                <div className="text-sm text-gray-600">Pageviews Tracked</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">50K+</div>
-                <div className="text-sm text-gray-600">Websites</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">195+</div>
-                <div className="text-sm text-gray-600">Countries</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">99.9%</div>
-                <div className="text-sm text-gray-600">Uptime</div>
-              </div>
+            <div className="text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Global Reach
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            JADTrax supports comprehensive regional analytics for 15+ major countries with detailed city-level insights, making it perfect for businesses with international audiences and global reach requirements.
+            </p>
             </div>
           </div>
         </div>
       </section>
 
+
+      <section className="py-20 bg-gray-50" id="customers">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+        About JAD Tech
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        JAD Tech is a forward-thinking technology company that specializes in delivering innovative digital solutions. With our motto <strong>"INNOVATE . TRANSFORM . SUCCEED"</strong>, we focus on creating cutting-edge applications that drive business growth and efficiency. Our expertise spans across web development, mobile applications, digital marketing, and business consulting.
+      </p>
+    </div>
+
+    <div className="text-center">
+      <h2 className="text-3xl lg:text-4xl text-gray-900 mb-6">
+        The JADTrax Story
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+        <strong>JADTrax = JAD Tech + Tracks/Tracking</strong>
+      </p>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+        <strong>JAD</strong> → Represents your company JAD Tech, ensuring brand consistency.
+      </p>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+        <strong>Trax</strong> → A modern, tech-style spelling of Tracks, implying:
+      </p>
+      <ul className="list-disc list-inside text-center text-gray-600 max-w-3xl mx-auto space-y-2">
+        <li>Tracking website traffic</li>
+        <li>Real-time data tracking</li>
+        <li>Monitoring user behavior</li>
+        <li>Following regional performance trends</li>
+        <li>Insightful movement and flow tracking across platforms</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
       {/* Additional Sections (Below the fold) */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="JAD">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
